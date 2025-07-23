@@ -1,0 +1,124 @@
+/* ServerList.css - Styles pour la liste des serveurs CoDraw */
+
+.server-status-badge.active {
+  background: #e6fffa;
+  color: #319795;
+  border-radius: 8px;
+  font-weight: 600;
+  padding: 0.13em 0.85em;
+  font-size: 0.98em;
+  margin-left: 0.6em;
+  display: inline-block;
+}
+
+.server-status-badge.museum {
+  background: #fefcbf;
+  color: #b7791f;
+  border-radius: 8px;
+  font-weight: 600;
+  padding: 0.13em 0.85em;
+  font-size: 0.98em;
+  margin-left: 0.6em;
+  display: inline-block;
+}
+
+@media (max-width: 600px) {
+  .server-list-container {
+    padding: 0.5rem;
+  }
+  .server-list-item {
+    padding: 0.7rem 0.4rem;
+  }
+}
+
+/* Simple vertical list styles */
+.server-list-simple {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.server-list-item {
+  background: #fff;
+  border-radius: 7px;
+  margin-bottom: 1.15rem;
+  padding: 1.1rem 1.2rem 0.7rem 1.2rem;
+  box-shadow: 0 1px 6px 0 rgba(102,126,234,0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.server-main-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #4c51bf;
+}
+.server-desc-simple {
+  color: #555;
+  font-size: 0.97rem;
+  margin-left: 0.1rem;
+}
+.server-meta-simple {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin-top: 0.1rem;
+  font-size: 0.98rem;
+  color: #444;
+}
+
+
+.server-list-container {
+  max-width: 540px;
+  margin: 2rem auto;
+  padding: 1.2rem 0.5rem;
+  background: #f8fafc;
+  border-radius: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+.server-list-btn {
+  background: #667eea;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.45rem 1.1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  margin-left: 1rem;
+  transition: background 0.2s;
+}
+.server-list-btn:hover:not(:disabled) {
+  background: #5a67d8;
+}
+
+.server-list-btn:disabled {
+  background: #e2e8f0;
+  color: #b0b0b0;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.server-list-empty {
+  color: #aaa;
+  font-style: italic;
+  margin-top: 2.5rem;
+  text-align: center;
+  font-size: 1.15rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}

@@ -1,0 +1,86 @@
+/* Style moderne pour la Drawing Session */
+.drawing-session-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f7fafc 0%, #e3e8ee 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+}
+
+.drawing-navbar {
+  width: 100vw;
+  background: #2d3748;
+  color: #fff;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  margin-bottom: 2rem;
+}
+.drawing-navbar button {
+  background: #fff;
+  color: #2d3748;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-right: 1rem;
+  transition: background 0.2s;
+}
+.drawing-navbar button:hover {
+  background: #e2e8f0;
+}
+
+.drawing-canvas-area {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.drawing-timer {
+  font-size: 1.3rem;
+  color: #4a5568;
+  margin-bottom: 1rem;
+}
+.drawing-immortalize-btn {
+  background: #4299e1;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.drawing-immortalize-btn:hover {
+  background: #2b6cb0;
+}
+.drawing-players-list {
+  margin-top: 2rem;
+  background: #edf2f7;
+  border-radius: 10px;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+.drawing-players-list h3 {
+  margin-bottom: 0.5rem;
+  color: #2d3748;
+}
+.drawing-players-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.drawing-players-list li {
+  padding: 0.3rem 0;
+  color: #4a5568;
+  font-size: 1.05rem;
+}

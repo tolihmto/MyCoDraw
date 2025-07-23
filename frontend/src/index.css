@@ -1,0 +1,96 @@
+/* index.css - CoDraw global styles */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
+  background: #f7fafc;
+  color: #222;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.canvas-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.toolbar {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  background: #eef2ff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px 0 rgba(102,126,234,0.10);
+}
+
+.toolbar button {
+  background: #fff;
+  border: 1px solid #c3dafe;
+  border-radius: 4px;
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+  transition: background 0.2s, border 0.2s;
+}
+
+.toolbar button.active,
+.toolbar button:active {
+  background: #667eea;
+  color: #fff;
+  border-color: #667eea;
+}
+
+.toolbar button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.toolbar input[type="color"] {
+  border: none;
+  background: transparent;
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+}
+
+.toolbar input[type="range"] {
+  width: 100px;
+}
+
+.museum-banner {
+  background: #ffe066;
+  color: #7c5e10;
+  padding: 0.5rem 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  font-size: 1.15rem;
+}
+
+.timer {
+  font-family: monospace;
+  background: #e9ecef;
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  margin: 0 0.5rem;
+}
+
+.immortalize-btn {
+  background: #ffd700;
+  color: #222;
+  border-color: #ffd700;
+  font-weight: bold;
+}
+
+.immortalize-btn:disabled {
+  background: #f6e58d;
+  color: #aaa;
+  border-color: #f6e58d;
+}

@@ -1,0 +1,23 @@
+{
+  "server": {
+    "port": 3000,
+    "maxPlayers": 10,
+    "timeout": 60000
+  },
+  "database": {
+    "host": "localhost",
+    "port": 5432,
+    "user": "codraw_user",
+    "password": "securepassword",
+    "database": "codraw_db"
+  },
+  "canvas": {
+    "width": 800,
+    "height": 600,
+    "backgroundColor": "#ffffff"
+  },
+  "logging": {
+    "level": "info",
+    "file": "logs/server.log"
+  }
+}
