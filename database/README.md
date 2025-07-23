@@ -1,18 +1,83 @@
-# CoDraw Database Documentation
+# 🗄️ CoDraw – Database Documentation
 
 ## Introduction
 
-This document provides an overview of the database structure and setup for the CoDraw application. The database is essential for storing user profiles, game servers, and drawings created during collaborative sessions.
+Cette documentation décrit la structure et la configuration de la base de données utilisée par l’application CoDraw.
 
-## Database Schema
+## ⚙️ Système de base de données
 
-The database schema is defined in the `schema.sql` file located in this directory. It includes the following tables:
+- **Type** : MongoDB (NoSQL)
+- **Chaîne de connexion** :
+  ```
+  mongodb://localhost:27017/codraw
+  ```
+- **Gestion via Mongoose** (ODM pour Node.js)
 
-- **Users**: Stores user information such as username, email, password hash, and profile image.
-- **Servers**: Contains details about game servers, including server name, creator, and current player count.
-- **Drawings**: Holds information about drawings, including the drawing data, associated user, and timestamp.
+## 📦 Collections principales
 
-## Setup Instructions
+- **users** : Stocke les informations des utilisateurs (username, email, mot de passe hashé, avatar...)
+- **servers** : Contient les serveurs de jeu (nom, créateur, joueurs, etc.)
+- **drawings** : Sauvegarde les dessins (données image, auteur, timestamp...)
+
+## 📝 Setup Instructions
+
+1. Assurez-vous que MongoDB est installé et en cours d’exécution sur votre machine ou accessible à distance.
+2. Vérifiez que la variable d’environnement `MONGO_URI` dans le backend pointe bien vers :
+   ```
+   mongodb://localhost:27017/codraw
+   ```
+3. Les schémas sont définis dans le code via Mongoose (`/backend/src/models/`).
+
+Aucune migration SQL ou script manuel n’est nécessaire : les collections sont créées automatiquement à la première utilisation.
+
+---
+
+## 🧩 Exemples de schémas Mongoose (TypeScript)
+
+Les schémas des collections sont définis dans `/backend/src/models/`.
+
+### User
+```typescript
+import { Schema, model } from "mongoose";
+
+const UserSchema = new Schema({
+  username: { type: String, required: true, unique: true },
+  email:    { type: String, required: true, unique: true },
+  password: { type: String, required: true },
+  profileImage: String,
+  createdAt: { type: Date, default: Date.now }
+});
+
+export default model("User", UserSchema);
+```
+
+### Server
+```typescript
+import { Schema, model, Types } from "mongoose";
+
+const ServerSchema = new Schema({
+  name: { type: String, required: true },
+  creator: { type: Types.ObjectId, ref: "User", required: true },
+  playerCount: { type: Number, default: 0 },
+  status: { type: String, default: "active" },
+  createdAt: { type: Date, default: Date.now }
+});
+
+export default model("Server", ServerSchema);
+```
+
+### Drawing
+```typescript
+import { Schema, model, Types } from "mongoose";
+
+const DrawingSchema = new Schema({
+  canvasData: { type: String, required: true }, // base64 ou SVG
+  user: { type: Types.ObjectId, ref: "User", required: true },
+  createdAt: { type: Date, default: Date.now }
+});
+
+export default model("Drawing", DrawingSchema);
+```
 
 1. **Database Creation**: 
    - Use the SQL commands in `schema.sql` to create the necessary tables in your database management system (e.g., MySQL, PostgreSQL).
