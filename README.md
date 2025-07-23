@@ -1,65 +1,81 @@
-# CoDraw - Jeu Multijoueur de Dessin en Ligne
+# 🎨 CoDraw – Jeu Multijoueur de Dessin en Ligne ✏️🖌️
 
-## Présentation
+[![GitHub Repo](https://img.shields.io/badge/GitHub-CoDraw-blue?logo=github)](https://github.com/tolihmto/MyCoDraw.git)
 
-CoDraw est une plateforme web qui permet à plusieurs utilisateurs de dessiner ensemble en temps réel sur un canevas partagé. Le projet est conçu pour offrir une expérience collaborative enrichissante, avec des fonctionnalités telles que la création de serveurs communautaires, la gestion de profils utilisateurs et une galerie personnelle pour sauvegarder les œuvres.
+## 🚀 Présentation
 
-## Fonctionnalités
+CoDraw est une plateforme web qui permet à plusieurs utilisateurs de dessiner ensemble en **temps réel** sur un canevas partagé. Vivez une expérience collaborative fun et créative ! 👥✨
 
-- **Système de serveurs de jeux** : Créez et rejoignez des serveurs de dessin, avec une liste dynamique des serveurs disponibles.
-- **Session de dessin collaborative** : Dessinez ensemble en temps réel, avec des outils variés et la possibilité d'immortaliser vos créations.
-- **Canevas de dessin** : Profitez d'une interface intuitive avec des outils de dessin, une palette de couleurs et des options de personnalisation.
-- **Profils utilisateurs** : Créez un compte, gérez votre profil et accédez à votre galerie personnelle.
-- **Musée des dessins** : Consultez les œuvres immortalisées par les utilisateurs dans un espace dédié.
+## 🌟 Fonctionnalités
 
-## Installation
+- 🖼️ **Canevas partagé** : Dessinez à plusieurs instantanément
+- 🧑‍🤝‍🧑 **Serveurs de jeu** : Créez ou rejoignez des salons de dessin
+- 🖌️ **Outils variés** : Brosses, couleurs, pot de peinture, gomme…
+- 🏆 **Immortalisez vos œuvres** : Figez vos créations dans le musée virtuel
+- 👤 **Profils & galeries** : Sauvegardez et exposez vos dessins
+- 🖼️ **Musée communautaire** : Admirez les œuvres des autres joueurs
+
+## ⚙️ Stack Technique
+
+- Frontend : React + TypeScript + Socket.io-client
+- Backend : Node.js + Express + TypeScript + Socket.io
+- Base de données : MongoDB (Mongoose)
+
+## 🛠️ Installation
 
 ### Prérequis
-
-- Node.js (version 14 ou supérieure)
+- Node.js (v14+)
 - npm ou yarn
-- Une base de données SQL (MySQL, PostgreSQL, etc.)
+- **MongoDB** (local ou cloud)
 
-### Étapes d'installation
+### Étapes
 
-1. **Clonez le dépôt** :
+1. **Clonez le dépôt**
    ```bash
-   git clone <URL_DU_DEPOT>
+   git clone https://github.com/tolihmto/MyCoDraw.git
    cd codraw-app
    ```
 
-2. **Installez les dépendances pour le frontend** :
+2. **Installez les dépendances frontend**
    ```bash
    cd frontend
    npm install
    ```
 
-3. **Installez les dépendances pour le backend** :
+3. **Installez les dépendances backend**
    ```bash
    cd ../backend
    npm install
    ```
 
-4. **Configurez la base de données** :
-   - Modifiez le fichier `database/schema.sql` pour adapter le schéma à votre base de données.
-   - Exécutez le script SQL pour créer les tables nécessaires.
+4. **Configurez vos variables d'environnement**
+   - Créez un fichier `.env` dans `/backend` avec `MONGO_URI` et autres infos nécessaires.
 
-5. **Démarrez le serveur backend** :
+5. **Démarrez le backend**
    ```bash
    cd backend
    npm start
    ```
 
-6. **Démarrez le frontend** :
+6. **Démarrez le frontend**
    ```bash
    cd ../frontend
    npm start
    ```
 
-## Utilisation
+## 💡 Utilisation
 
-- Accédez à l'application via votre navigateur à l'adresse `http://localhost:3000`.
-- Créez un compte ou connectez-vous pour accéder à toutes les fonctionnalités.
+- Rendez-vous sur [http://localhost:3000](http://localhost:3000)
+- Créez un serveur, invitez vos amis et commencez à dessiner !
+
+## 📦 Dépôt GitHub
+
+👉 [https://github.com/tolihmto/MyCoDraw.git](https://github.com/tolihmto/MyCoDraw.git)
+
+---
+
+✨ Amusez-vous bien sur CoDraw ! ✨
+
 - Rejoignez un serveur de dessin ou créez-en un nouveau pour commencer à dessiner.
 
 ## Contributions
