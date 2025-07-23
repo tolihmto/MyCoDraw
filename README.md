@@ -90,7 +90,7 @@ Les contributions sont les bienvenues ! Pour contribuer, veuillez suivre ces ét
 
 ## Auteurs
 
-- [Votre Nom](https://github.com/votreprofil)
+- [Tolihmto](https://github.com/tolihmto)
 
 ## License
 
